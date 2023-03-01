@@ -4,66 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Netflix Project</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto&family=Sorts+Mill+Goudy&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="back-color">
-      <img
-        src="./logo.png"
-        alt=""
-        width="10%"
-        height="10%"
-        class="img-netflix"
-      />
-      <p class="p1">
-        <i>
-          Thank you for signing up at Netflix. Tell us more about yourself.</i
-        >
-      </p>
-      <div class="login-body">
-        <div>
-          <form action="">
-            <span class="namesurname">Name</span><br />
+    <div class="container">
+      <div class="container-shadow">
+        <div class="title-fonts">NET<span style="color: red">FLIX</span></div>
+        <div class="description-fonts">
+          Thank you for signing up at Netflix. Tell us more about yourself.
+        </div>
+        <div class="container-black-form">
+          <form
+            action=""
+            class="label-fonts"
+            onsubmit="alert('thank you for register..')"
+          >
+            <div class="label" for="name">Name</div>
             <input
               type="text"
-              class="name"
               placeholder="enter your name"
-            /><br />
-            <span class="namesurname">Age</span><br />
-            <input type="number" class="name" placeholder="age" />
-            <br />
-            <span class="namesurname">E-mail</span><br />
-            <input type="number" class="name" placeholder="enter your Email" />
-            <br />
-            <span class="namesurname">Content Type</span><br />
-            <select id="select">
-              <option value="1">Series</option>
-              <option value="2">Film</option>
+              class="forminput"
+              name="name"
+              required
+            />
+            <label for="age" class="label">Age</label>
+            <input
+              type="number"
+              placeholder="age"
+              class="forminput"
+              name="age"
+            />
+            <div class="label" for="email">Email</div>
+            <input
+              type="text"
+              class="forminput"
+              name="email"
+              placeholder="enter your Email"
+              required
+            />
+            <div class="label" for="content-type">Content Type</div>
+            <select name="content-type" class="forminput">
+              <option value="Series">Series</option>
+              <option value="Movies">Movies</option>
+              <option value="Cartoon">Cartoon</option>
+              <option value="Other">Other</option>
             </select>
-            <br />
-            <span class="namesurname">Movie Type</span><br /><br />
-            <input type="checkbox" class="input1" />
-            <label for="" class="boxes">Comedy</label><br />
-            <input type="checkbox" class="input1" />
-            <label for="" class="boxes">Action</label><br />
-            <input type="checkbox" class="input1" />
-            <label for="" class="boxes">Romance</label>
-
-            <div>
-              <span class="namesurname">Gender</span><br /><br />
-              <input type="radio" class="input1" name="radio1" />
-              <label for="" class="boxes">Male</label><br />
-              <input type="radio" class="input1" name="radio1" />
-              <label for="" class="boxes">Female</label><br />
-              <input type="radio" class="input1" name="radio1" />
-              <label for="" class="boxes">Other</label>
+            <div class="label formborder">
+              <div for="movie-type">Movie Type</div>
+              <div>
+                <input type="checkbox" name="comedy" id="comedy" />Comedy
+              </div>
+              <div>
+                <input type="checkbox" name="action" id="action" />Action
+              </div>
+              <div>
+                <input type="checkbox" name="romance" id="romance" />Romance
+              </div>
             </div>
-            <br />
-            <span class="namesurname">Feedback</span><br />
-            <textarea name="" id="" cols="30" rows="10" class="name"></textarea
-            ><br />
-            <button class="button">Send</button>
+            <div class="label formborder">
+              <div for="gender">Gender</div>
+              <div><input type="radio" name="gender" value="male" />Male</div>
+              <div>
+                <input type="radio" name="gender" value="female" />Female
+              </div>
+              <div><input type="radio" name="gender" value="other" />Other</div>
+            </div>
+            <div class="formborder">
+              <div class="label" for="feedback">Feedback</div>
+              <textarea name="comment" class="forminput">any comment</textarea>
+            </div>
+            <button type="submit">Send</button>
           </form>
         </div>
       </div>
